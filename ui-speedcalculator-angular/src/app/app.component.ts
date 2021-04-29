@@ -9,12 +9,18 @@ export class AppComponent {
   title = 'ui-speedcalculator-angular';
   speed: string;
 
-  constructor() {
+  constructor() { 
     this.speed = '50'
   }
 
-  setSpeedDisplay(){
-    
+  ngOnInit(){
+
+  }
+
+  setSpeed(event) {
+    console.log(event);
+    this.speed = event;
+    //console.log('it does nothing',username);
   }
 
 }
