@@ -20,7 +20,7 @@ export class CalculatorService {
     // Travel time in minutes
     this.travelTime = (s / v) / 60;
 
-        // this.travelTime = (Math.round((s / v) / 60)).toFixed(2);
+    // this.travelTime = (Math.round((s / v) / 60)).toFixed(2);
     return this.travelTime;
   }
 }

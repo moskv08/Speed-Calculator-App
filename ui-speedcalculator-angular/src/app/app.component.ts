@@ -20,17 +20,21 @@ export class AppComponent {
   ngOnInit(){ }
 
   setSpeed(speed: number) {
-    if(speed < 0 || speed > 150) {
-      console.log('Something went wrong.')
+    try {
+      this.speed = speed;
+      this.travelTime = this.service.calculateTravelTime(this.speed, this.distance)
+    } catch (error) {
+      console.log(error);
     }
-
-    this.speed = speed;
-    this.travelTime = this.service.calculateTravelTime(this.speed, this.distance)
   }
 
   setDistance(distance: number) {
-    this.distance = distance;
-    this.travelTime = this.service.calculateTravelTime(this.speed, this.distance)
+    try {
+      this.distance = distance;
+      this.travelTime = this.service.calculateTravelTime(this.speed, this.distance);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
 }
