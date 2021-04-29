@@ -6,21 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ui-speedcalculator-angular';
-  speed: string;
+  distance: number;
+  speed: number;
 
   constructor() { 
-    this.speed = '50'
+    this.speed = 50
+    this.distance = 100
   }
 
-  ngOnInit(){
+  ngOnInit(){ }
+
+  setSpeed(speed: number) {
+    if(speed < 0 || speed < 150) {
+      console.log('Something went wrong.')
+    }
+
+    this.speed = speed;
 
   }
 
-  setSpeed(event) {
-    console.log(event);
-    this.speed = event;
-    //console.log('it does nothing',username);
+  setDistance(distance: number) {
+    this.distance = distance;
   }
 
 }
