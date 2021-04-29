@@ -3,37 +3,30 @@
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
       <svg class="bi me-2" width="40" height="32">
         <use xlink:href="#bootstrap" /></svg>
-      <span class="fs-4">Speed Calculator App</span>
+      <span class="fs-4">Travel Time Calculator</span>
     </a>
   </header>
 
   <!-- CONTENT -->
   <div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold">{{ speed }} km/h</h1>
-    <h1 class="display-5 fw-bold">{{ distance }} km</h1>
-
+    <p class="display-6">Driving <span>{{ distance }} km</span> with a speed of <span>{{ speed }}</span> km/h will result in a travel time of <span>{{ travelTime }} in minutes</span></p>
+    
     <div class="col-lg-6 mx-auto">
-
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <label for="customRange1" class="form-label">Speed</label>
         <input type="range" class="form-range" id="speedRange" min="0" max="150" value="50"
           (input)="setSpeed($event.target.value)">
       </div>
-      <p class="lead mb-4">See how speed has an impact on your travel time. Tell me your speed and I tell you how long
-        your drive will be</p>
+      <p class="lead mb-4">Change the distance to influence travel time.</p>
     </div>
 
     <div class="col-lg-6 mx-auto">
-
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-        <label for="customRange1" class="form-label">Distance</label>
+        <label for="distanceRange" class="form-label">Distance</label>
         <input type="range" class="form-range" id="distanceRange" min="0" max="150" value="100"
           (input)="setDistance($event.target.value)">
       </div>
-      <p class="lead mb-4">See how speed has an impact on your travel time. Tell me your speed and I tell you how long
-        your drive will be</p>
+      <p class="lead mb-4">Impact your travel time by adjusting speed.</p>
     </div>
   </div>
 </div>
