@@ -14,8 +14,8 @@
     <figure class="text-center">
       <blockquote class="blockquote">
         <p><small class="text-muted">Driving </small>{{ distance }} km <small class="text-muted">
-          with a speed of </small>{{ speed }}km/h <small class="text-muted">will result in a travel time of
-            </small>{{ travelTime }} <small class="text-muted"> minutes.</small></p>
+          with an average speed of </small>{{ speed }} km/h <small class="text-muted">will result in a travel time of
+            </small>{{ travelTime }}</p>
       </blockquote>
       <figcaption class="blockquote-footer">
         The duration of the trip can be calculated using the formula: <cite title="formula">t = d / v</cite>
@@ -26,7 +26,7 @@
     <div class="col-lg-6 mx-auto">
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <label for="distanceRange" class="form-label">Distance</label>
-        <input type="range" class="form-range" id="distanceRange" min="0" max="150" value="100"
+        <input type="range" class="form-range" id="distanceRange" min="1" max="150" value="100"
           (input)="setDistance($event.target.value)">
       </div>
       <p>Impact your travel time by adjusting speed.</p>
@@ -36,7 +36,7 @@
     <div class="col-lg-6 mx-auto">
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <label for="customRange1" class="form-label">Speed</label>
-        <input type="range" class="form-range" id="speedRange" min="0" max="150" value="50"
+        <input type="range" class="form-range" id="speedRange" min="1" max="150" value="50"
           (input)="setSpeed($event.target.value)">
       </div>
       <p>Change the distance to influence travel time.</p>

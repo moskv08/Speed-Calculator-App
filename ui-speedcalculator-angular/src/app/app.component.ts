@@ -9,12 +9,12 @@ import { CalculatorService } from './services/calculator.service';
 export class AppComponent {
   distance: number;
   speed: number;
-  travelTime: number;
+  travelTime: string;
 
   constructor(private service: CalculatorService) { 
     this.speed = 50;
     this.distance = 100;
-    this.travelTime = 0;
+    this.travelTime = this.service.calculateTravelTime(this.speed, this.distance)
   }
 
   ngOnInit(){ }
